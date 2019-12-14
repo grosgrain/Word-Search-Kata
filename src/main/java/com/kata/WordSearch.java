@@ -10,7 +10,8 @@ public class WordSearch {
             for (int j = 0; j < grid[0].length; ++j) {
                 if (grid[i][j] == target.charAt(0) && (
                         findMatchedHorizontally(grid, target, result, i, j) ||
-                        findMatchedHorizontallyBackward(grid, target, result, i, j))){
+                        findMatchedHorizontallyBackward(grid, target, result, i, j) ||
+                        findMatchedVertically(grid, target, result, i, j))) {
                     return result;
                 }
             }
@@ -20,7 +21,7 @@ public class WordSearch {
 
     private boolean findMatchedHorizontally(char[][] grid, String target, List<Coordinate> result, int x, int y) {
             for (int i = 0; i < target.length(); ++i) {
-                if (x < grid.length && y < grid[0].length && grid[x][y] == target.charAt(i)) {
+                if (x >= 0 && x < grid.length && y >= 0 && y < grid[0].length && grid[x][y] == target.charAt(i)) {
                     result.add(new Coordinate(x, y));
                     y++;
                 } else {
@@ -33,7 +34,7 @@ public class WordSearch {
 
     private boolean findMatchedHorizontallyBackward(char[][] grid, String target, List<Coordinate> result, int x, int y) {
         for (int i = 0; i < target.length(); ++i) {
-            if (x < grid.length && y < grid[0].length && grid[x][y] == target.charAt(i)) {
+            if (x >= 0 && x < grid.length && y >= 0 && y < grid[0].length && grid[x][y] == target.charAt(i)) {
                 result.add(new Coordinate(x, y));
                 y--;
             } else {
@@ -44,6 +45,18 @@ public class WordSearch {
         return true;
     }
 
+    private boolean findMatchedVertically(char[][] grid, String target, List<Coordinate> result, int x, int y) {
+        for (int i = 0; i < target.length(); ++i) {
+            if (x >= 0 && x < grid.length && y >= 0 && y < grid[0].length && grid[x][y] == target.charAt(i)) {
+                result.add(new Coordinate(x, y));
+                x++;
+            } else {
+                result.clear();
+                return false;
+            }
+        }
+        return true;
+    }
 
     class Coordinate {
         int x;
