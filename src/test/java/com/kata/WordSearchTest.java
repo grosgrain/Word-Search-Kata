@@ -53,4 +53,10 @@ public class WordSearchTest {
         assertEquals("[(5,9), (5,8), (5,7), (5,6)]",
                 wordSearch.search(grid, "KHAN").toString());
     }
+
+    @Test
+    public void whenTargetExistAscendingReturnTheCoordinate(){
+        assertEquals("[(0,1), (1,0)]",
+                wordSearch.search(grid, "LM").toString());
+    }
 }
