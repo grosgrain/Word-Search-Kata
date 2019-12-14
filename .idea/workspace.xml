@@ -55,7 +55,23 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WordSearchTest.whenTargetExistAscendingReturnTheCoordinate">
+  <component name="RunManager" selected="JUnit.WordSearchTest.whenTargetExistAscendingBackwardReturnTheCoordinate">
+    <configuration name="WordSearchTest.whenTargetExistAscendingBackwardReturnTheCoordinate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.java.com.kata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.java.com.kata" />
+      <option name="MAIN_CLASS_NAME" value="test.java.com.kata.WordSearchTest" />
+      <option name="METHOD_NAME" value="whenTargetExistAscendingBackwardReturnTheCoordinate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WordSearchTest.whenTargetExistAscendingReturnTheCoordinate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata" />
       <extension name="coverage">
@@ -83,22 +99,6 @@
       <option name="PACKAGE_NAME" value="test.java.com.kata" />
       <option name="MAIN_CLASS_NAME" value="test.java.com.kata.WordSearchTest" />
       <option name="METHOD_NAME" value="whenTargetExistHorizontallyBackwardReturnTheCoordinate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WordSearchTest.whenTargetExistHorizontallyReturnTheCoordinate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kata" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.java.com.kata.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.java.com.kata" />
-      <option name="MAIN_CLASS_NAME" value="test.java.com.kata.WordSearchTest" />
-      <option name="METHOD_NAME" value="whenTargetExistHorizontallyReturnTheCoordinate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WordSearchTest.whenTargetExistAscendingBackwardReturnTheCoordinate" />
         <item itemvalue="JUnit.WordSearchTest.whenTargetExistAscendingReturnTheCoordinate" />
         <item itemvalue="JUnit.WordSearchTest.whenTargetExistVerticallyBackwardReturnTheCoordinate" />
         <item itemvalue="JUnit.WordSearchTest.whenTargetExistVerticallyReturnTheCoordinate" />
         <item itemvalue="JUnit.WordSearchTest.whenTargetExistHorizontallyBackwardReturnTheCoordinate" />
-        <item itemvalue="JUnit.WordSearchTest.whenTargetExistHorizontallyReturnTheCoordinate" />
       </list>
     </recent_temporary>
   </component>
@@ -200,22 +200,22 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="314" y="24" key="CommitChangelistDialog2/0.23.1440.797@0.23.1440.797" timestamp="1576282431174" />
-    <state width="1358" height="191" key="GridCell.Tab.0.bottom" timestamp="1576282937295">
+    <state width="1358" height="191" key="GridCell.Tab.0.bottom" timestamp="1576282961732">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1358" height="191" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1576282937295" />
-    <state width="1358" height="191" key="GridCell.Tab.0.center" timestamp="1576282937294">
+    <state width="1358" height="191" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1576282961732" />
+    <state width="1358" height="191" key="GridCell.Tab.0.center" timestamp="1576282961731">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1358" height="191" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1576282937294" />
-    <state width="1358" height="191" key="GridCell.Tab.0.left" timestamp="1576282937293">
+    <state width="1358" height="191" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1576282961731" />
+    <state width="1358" height="191" key="GridCell.Tab.0.left" timestamp="1576282961730">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1358" height="191" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1576282937293" />
-    <state width="1358" height="191" key="GridCell.Tab.0.right" timestamp="1576282937294">
+    <state width="1358" height="191" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1576282961730" />
+    <state width="1358" height="191" key="GridCell.Tab.0.right" timestamp="1576282961732">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1358" height="191" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1576282937294" />
+    <state width="1358" height="191" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1576282961732" />
     <state width="1358" height="237" key="GridCell.Tab.1.bottom" timestamp="1576281983730">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
