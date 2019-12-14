@@ -47,4 +47,10 @@ public class WordSearchTest {
         assertEquals("[(0,6), (0,7), (0,8), (0,9), (0,10)]",
                 wordSearch.search(grid, "BONES").toString());
     }
+
+    @Test
+    public void whenTargetExistVerticallyBackwardReturnTheCoordinate(){
+        assertEquals("[(5,9), (5,8), (5,7), (5,6)]",
+                wordSearch.search(grid, "KHAN").toString());
+    }
 }

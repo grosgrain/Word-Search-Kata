@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="153f7474-1843-43a5-af61-6d7b3d5297bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kata/main/java/com/kata/WordSearch$Coordinate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kata/main/java/com/kata/WordSearch$Coordinate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kata/main/java/com/kata/WordSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kata/main/java/com/kata/WordSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kata/test/java/com/kata/WordSearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kata/test/java/com/kata/WordSearchTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kata/WordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kata/WordSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/kata/WordSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/kata/WordSearchTest.java" afterDir="false" />
     </list>
@@ -54,7 +50,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WordSearchTest.whenTargetExistVerticallyReturnTheCoordinate">
+  <component name="RunManager" selected="JUnit.WordSearchTest.whenTargetExistVerticallyBackwardReturnTheCoordinate">
     <configuration name="WordSearchTest.whenTargetExistHorizontallyBackwardReturnTheCoordinate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata" />
       <extension name="coverage">
@@ -87,6 +83,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WordSearchTest.whenTargetExistVerticallyBackwardReturnTheCoordinate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.java.com.kata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.java.com.kata" />
+      <option name="MAIN_CLASS_NAME" value="test.java.com.kata.WordSearchTest" />
+      <option name="METHOD_NAME" value="whenTargetExistVerticallyBackwardReturnTheCoordinate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WordSearchTest.whenTargetExistVerticallyReturnTheCoordinate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata" />
       <extension name="coverage">
@@ -105,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WordSearchTest.whenTargetExistVerticallyBackwardReturnTheCoordinate" />
         <item itemvalue="JUnit.WordSearchTest.whenTargetExistVerticallyReturnTheCoordinate" />
         <item itemvalue="JUnit.WordSearchTest.whenTargetExistHorizontallyBackwardReturnTheCoordinate" />
         <item itemvalue="JUnit.WordSearchTest.whenTargetExistHorizontallyReturnTheCoordinate" />
@@ -133,7 +146,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576276018230</updated>
-      <workItem from="1576276022651" duration="4740000" />
+      <workItem from="1576276022651" duration="5004000" />
     </task>
     <servers />
   </component>
@@ -161,38 +174,38 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="494" y="334" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.797@0.23.1440.797" timestamp="1576277547605" />
-    <state width="1358" height="191" key="GridCell.Tab.0.bottom" timestamp="1576281956934">
+    <state width="1358" height="237" key="GridCell.Tab.0.bottom" timestamp="1576281983728">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1358" height="191" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1576281956934" />
-    <state width="1358" height="191" key="GridCell.Tab.0.center" timestamp="1576281956933">
+    <state width="1358" height="237" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1576281983728" />
+    <state width="1358" height="237" key="GridCell.Tab.0.center" timestamp="1576281983726">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1358" height="191" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1576281956933" />
-    <state width="1358" height="191" key="GridCell.Tab.0.left" timestamp="1576281956932">
+    <state width="1358" height="237" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1576281983726" />
+    <state width="1358" height="237" key="GridCell.Tab.0.left" timestamp="1576281983726">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1358" height="191" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1576281956932" />
-    <state width="1358" height="191" key="GridCell.Tab.0.right" timestamp="1576281956933">
+    <state width="1358" height="237" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1576281983726" />
+    <state width="1358" height="237" key="GridCell.Tab.0.right" timestamp="1576281983727">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1358" height="191" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1576281956933" />
-    <state width="1358" height="237" key="GridCell.Tab.1.bottom" timestamp="1576281844143">
+    <state width="1358" height="237" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1576281983727" />
+    <state width="1358" height="237" key="GridCell.Tab.1.bottom" timestamp="1576281983730">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1358" height="237" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1576281844143" />
-    <state width="1358" height="237" key="GridCell.Tab.1.center" timestamp="1576281844142">
+    <state width="1358" height="237" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1576281983730" />
+    <state width="1358" height="237" key="GridCell.Tab.1.center" timestamp="1576281983729">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1358" height="237" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1576281844142" />
-    <state width="1358" height="237" key="GridCell.Tab.1.left" timestamp="1576281844141">
+    <state width="1358" height="237" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1576281983729" />
+    <state width="1358" height="237" key="GridCell.Tab.1.left" timestamp="1576281983728">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1358" height="237" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1576281844141" />
-    <state width="1358" height="237" key="GridCell.Tab.1.right" timestamp="1576281844142">
+    <state width="1358" height="237" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1576281983728" />
+    <state width="1358" height="237" key="GridCell.Tab.1.right" timestamp="1576281983729">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state width="1358" height="237" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1576281844142" />
+    <state width="1358" height="237" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1576281983729" />
     <state x="515" y="236" key="chooseDestDirectoryDialog" timestamp="1576277451701">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
