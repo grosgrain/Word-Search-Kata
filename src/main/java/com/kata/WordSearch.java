@@ -14,7 +14,9 @@ public class WordSearch {
                         findMatchedVertically(grid, target, result, i, j)) ||
                         findMatchedVerticallyBackward(grid, target, result, i, j) ||
                         findMatchedAscending(grid, target, result, i, j) ||
-                        findMatchedAscendingBackward(grid, target, result, i, j)) {
+                        findMatchedAscendingBackward(grid, target, result, i, j) ||
+                        findMatchedDescending(grid, target, result, i, j) ||
+                        findMatchedDescendingBackward(grid, target, result, i, j)) {
                     return result;
                 }
             }
@@ -71,6 +73,7 @@ public class WordSearch {
                 return false;
             }
         }
+
         return true;
     }
 
@@ -93,6 +96,34 @@ public class WordSearch {
             if (x >= 0 && x < grid.length && y >= 0 && y < grid[0].length && grid[x][y] == target.charAt(i)) {
                 result.add(new Coordinate(x, y));
                 x--;
+                y--;
+            } else {
+                result.clear();
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean findMatchedDescending(char[][] grid, String target, List<Coordinate> result, int x, int y) {
+        for (int i = 0; i < target.length(); ++i) {
+            if (x >= 0 && x < grid.length && y >= 0 && y < grid[0].length && grid[x][y] == target.charAt(i)) {
+                result.add(new Coordinate(x, y));
+                x++;
+                y++;
+            } else {
+                result.clear();
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean findMatchedDescendingBackward(char[][] grid, String target, List<Coordinate> result, int x, int y) {
+        for (int i = 0; i < target.length(); ++i) {
+            if (x >= 0 && x < grid.length && y >= 0 && y < grid[0].length && grid[x][y] == target.charAt(i)) {
+                result.add(new Coordinate(x, y));
+                x++;
                 y--;
             } else {
                 result.clear();
