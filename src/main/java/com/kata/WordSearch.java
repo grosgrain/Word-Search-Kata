@@ -6,6 +6,8 @@ import java.util.List;
 public class WordSearch {
     /*Assumption:
      - if target is null or target is "", return null
+     - if target length is less than 2, return "Error: Word must be at least 2 letters long"
+     - All characters in target must be upper- case letters
      - if length of target is larger than length of grid, return null.
         Words will never "wrap" around the edges of the grid.
      - if grid is not square, print "Error: The grid is not a square"
@@ -18,6 +20,9 @@ public class WordSearch {
         }
         if (target == null || target.length() == 0 || target.length() > grid.length) {
             return null;
+        }
+        if (target.length() < 2) {
+            return "Error: Word must be at least 2 letters long";
         }
         List<Coordinate> result = new ArrayList<>();
         for (int i = 0; i < grid.length; ++i) {

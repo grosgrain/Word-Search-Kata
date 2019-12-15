@@ -35,7 +35,7 @@ public class WordSearchTest {
         //grid = generateRandomGrid();
     }
 
-    // Randomly Generate a n * n grid, n >= 2
+    // Randomly Generate a n * n grid, n >= 2. All letters in grid are upper-case
     private char[][] generateRandomGrid(){
         Random r = new Random();
         int n = MINSIZEOFGRID + r.nextInt(MAXSIZEOFGRID - MINSIZEOFGRID);
@@ -51,66 +51,58 @@ public class WordSearchTest {
     }
 
     @Test
-    public void whenTargetExistHorizontallyReturnTheCoordinate(){
+    public void checkIfTheTargetIsLegal() {
         assertNull(wordSearch.search(grid, ""));
         assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+        assertEquals("Error: Word must be at least 2 letters long",
+                wordSearch.search(grid, "S"));
+    }
+
+    @Test
+    public void whenTargetExistHorizontallyReturnTheCoordinate(){
         assertEquals("SCOTTY: (0,5),(1,5),(2,5),(3,5),(4,5),(5,5)",
                 wordSearch.search(grid, "SCOTTY"));
     }
 
     @Test
     public void whenTargetExistHorizontallyBackwardReturnTheCoordinate(){
-        assertNull(wordSearch.search(grid, ""));
-        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
         assertEquals("KIRK: (4,7),(3,7),(2,7),(1,7)",
-                wordSearch.search(grid, "KIRK").toString());
+                wordSearch.search(grid, "KIRK"));
     }
 
     @Test
     public void whenTargetExistVerticallyReturnTheCoordinate(){
-        assertNull(wordSearch.search(grid, ""));
-        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
         assertEquals("BONES: (0,6),(0,7),(0,8),(0,9),(0,10)",
-                wordSearch.search(grid, "BONES").toString());
+                wordSearch.search(grid, "BONES"));
     }
 
     @Test
     public void whenTargetExistVerticallyBackwardReturnTheCoordinate(){
-        assertNull(wordSearch.search(grid, ""));
-        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
         assertEquals("KHAN: (5,9),(5,8),(5,7),(5,6)",
-                wordSearch.search(grid, "KHAN").toString());
+                wordSearch.search(grid, "KHAN"));
     }
 
     @Test
     public void whenTargetExistAscendingReturnTheCoordinate(){
-        assertNull(wordSearch.search(grid, ""));
-        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
         assertEquals("LM: (0,1),(1,0)",
-                wordSearch.search(grid, "LM").toString());
+                wordSearch.search(grid, "LM"));
     }
 
     @Test
     public void whenTargetExistAscendingBackwardReturnTheCoordinate(){
-        assertNull(wordSearch.search(grid, ""));
-        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
         assertEquals("SULU: (3,3),(2,2),(1,1),(0,0)",
-                wordSearch.search(grid, "SULU").toString());
+                wordSearch.search(grid, "SULU"));
     }
 
     @Test
     public void whenTargetExistDescendingReturnTheCoordinate(){
-        assertNull(wordSearch.search(grid, ""));
-        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
         assertEquals("SPOCK: (2,1),(3,2),(4,3),(5,4),(6,5)",
-                wordSearch.search(grid, "SPOCK").toString());
+                wordSearch.search(grid, "SPOCK"));
     }
 
     @Test
     public void whenTargetExistDescendingBackwardReturnTheCoordinate(){
-        assertNull(wordSearch.search(grid, ""));
-        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
         assertEquals("UHURA: (4,0),(3,1),(2,2),(1,3),(0,4)",
-                wordSearch.search(grid, "UHURA").toString());
+                wordSearch.search(grid, "UHURA"));
     }
 }
