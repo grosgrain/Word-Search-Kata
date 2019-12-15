@@ -4,9 +4,13 @@ import main.java.com.kata.WordSearch;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import java.util.Random;
+
+import static org.junit.Assert.*;
 
 public class WordSearchTest {
+    private static final int MAXSIZEOFGRID = 100;
+    private static final int MINSIZEOFGRID = 2;
     WordSearch wordSearch;
     char[][] grid;
 
@@ -28,53 +32,85 @@ public class WordSearchTest {
                 {'O', 'J', 'Y', 'E', 'U', 'L', 'N', 'C', 'C', 'L', 'Y', 'B', 'Z', 'U', 'H'},
                 {'W', 'Z', 'M', 'I', 'S', 'U', 'K', 'U', 'R', 'B', 'I', 'D', 'U', 'X', 'S'},
                 {'K', 'Y', 'L', 'B', 'Q', 'Q', 'P', 'M', 'D', 'F', 'C', 'K', 'E', 'A', 'B'}};
+        //grid = generateRandomGrid();
+    }
+
+    // Randomly Generate a n * n grid, n >= 2
+    private char[][] generateRandomGrid(){
+        Random r = new Random();
+        int n = MINSIZEOFGRID + r.nextInt(MAXSIZEOFGRID - MINSIZEOFGRID);
+        char[][] grid = new char[n][n];
+        char[] letters = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
+                'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+        for (int i = 0; i < grid.length; ++i) {
+            for (int j = 0; j < grid[0].length; ++j) {
+                grid[i][j] = letters[r.nextInt(letters.length)];
+            }
+        }
+        return grid;
     }
 
     @Test
     public void whenTargetExistHorizontallyReturnTheCoordinate(){
-        assertEquals("[(0,5), (1,5), (2,5), (3,5), (4,5), (5,5)]",
-                wordSearch.search(grid, "SCOTTY").toString());
+        assertNull(wordSearch.search(grid, ""));
+        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+        assertEquals("SCOTTY: (0,5),(1,5),(2,5),(3,5),(4,5),(5,5)",
+                wordSearch.search(grid, "SCOTTY"));
     }
 
     @Test
     public void whenTargetExistHorizontallyBackwardReturnTheCoordinate(){
-        assertEquals("[(4,7), (3,7), (2,7), (1,7)]",
+        assertNull(wordSearch.search(grid, ""));
+        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+        assertEquals("KIRK: (4,7),(3,7),(2,7),(1,7)",
                 wordSearch.search(grid, "KIRK").toString());
     }
 
     @Test
     public void whenTargetExistVerticallyReturnTheCoordinate(){
-        assertEquals("[(0,6), (0,7), (0,8), (0,9), (0,10)]",
+        assertNull(wordSearch.search(grid, ""));
+        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+        assertEquals("BONES: (0,6),(0,7),(0,8),(0,9),(0,10)",
                 wordSearch.search(grid, "BONES").toString());
     }
 
     @Test
     public void whenTargetExistVerticallyBackwardReturnTheCoordinate(){
-        assertEquals("[(5,9), (5,8), (5,7), (5,6)]",
+        assertNull(wordSearch.search(grid, ""));
+        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+        assertEquals("KHAN: (5,9),(5,8),(5,7),(5,6)",
                 wordSearch.search(grid, "KHAN").toString());
     }
 
     @Test
     public void whenTargetExistAscendingReturnTheCoordinate(){
-        assertEquals("[(0,1), (1,0)]",
+        assertNull(wordSearch.search(grid, ""));
+        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+        assertEquals("LM: (0,1),(1,0)",
                 wordSearch.search(grid, "LM").toString());
     }
 
     @Test
     public void whenTargetExistAscendingBackwardReturnTheCoordinate(){
-        assertEquals("[(3,3), (2,2), (1,1), (0,0)]",
+        assertNull(wordSearch.search(grid, ""));
+        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+        assertEquals("SULU: (3,3),(2,2),(1,1),(0,0)",
                 wordSearch.search(grid, "SULU").toString());
     }
 
     @Test
     public void whenTargetExistDescendingReturnTheCoordinate(){
-        assertEquals("[(2,1), (3,2), (4,3), (5,4), (6,5)]",
+        assertNull(wordSearch.search(grid, ""));
+        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+        assertEquals("SPOCK: (2,1),(3,2),(4,3),(5,4),(6,5)",
                 wordSearch.search(grid, "SPOCK").toString());
     }
 
     @Test
     public void whenTargetExistDescendingBackwardReturnTheCoordinate(){
-        assertEquals("[(4,0), (3,1), (2,2), (1,3), (0,4)]",
+        assertNull(wordSearch.search(grid, ""));
+        assertNull(null, wordSearch.search(grid, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+        assertEquals("UHURA: (4,0),(3,1),(2,2),(1,3),(0,4)",
                 wordSearch.search(grid, "UHURA").toString());
     }
 }
